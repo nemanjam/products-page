@@ -35,6 +35,8 @@ export const CONFIG = {
 
 ## Installation and running
 
+I used Node.js `v22.9.0`.
+
 ```bash
 # install dependencies
 yarn install
