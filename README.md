@@ -9,6 +9,8 @@ Store page is on the `/store` route.
 
 ## Screenshots
 
+https://github.com/user-attachments/assets/429a83b7-8762-468b-91a2-ed48a150e64b
+
 ## Notes
 
 - I build it as a full stack SSR Next.js app. There is a simulated and `1s` delayed database call in `modules/database.ts` for fetching and filtering products. Search query term and display grid/list value are stored as url query param to keep SSR for products list, which is important for SEO and performance. Official docs linked in [References](#references) section also states this advantage.
@@ -46,6 +48,8 @@ yarn build
 # run in prod mode
 yarn cp
 node .next/standalone/server.js
+# or
+yarn standalone
 ```
 
 ### Docker deployment
@@ -68,7 +72,7 @@ Tutorial: https://fleek.xyz/blog/announcements/nextjs-support-release/
 
 ```bash
 # clone repo
-git clone git@github.com:vkostunica/products-page.git
+git clone git@github.com:nemanjam/products-page.git
 
 # in next.config.mjs comment out this line
 output: 'standalone',
