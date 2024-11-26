@@ -4,7 +4,7 @@ import { FC, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
-import tailwindConfig from '@/tailwind.config';
+import { tailwindConfig } from '@/utils/styles';
 import { useWindowSize } from '@uidotdev/usehooks';
 import { Menu, X } from 'lucide-react';
 
@@ -18,9 +18,7 @@ import starImage from '@/assets/icons/star.svg';
 
 const { HOME } = ROUTES;
 
-const lgBreakpoint = parseInt(
-  (tailwindConfig?.theme?.screens as { lg: string })?.lg
-);
+const lgBreakpoint = parseInt(tailwindConfig?.theme?.screens?.lg);
 
 const Header: FC = () => {
   const segment = useSelectedLayoutSegment();
